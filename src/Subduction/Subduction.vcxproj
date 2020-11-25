@@ -1,0 +1,191 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{B44D2BBE-7B57-40F8-88D8-014C9D227AB7}</ProjectGuid>
+    <Keyword>Win32Proj</Keyword>
+    <RootNamespace>Subduction</RootNamespace>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <CharacterSet>MultiByte</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>MultiByte</CharacterSet>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <LinkIncremental>true</LinkIncremental>
+    <OutDir>$(SolutionDir)bin\$(Configuration)\</OutDir>
+    <IntDir>$(SolutionDir)tmp\$(ProjectName)\$(Configuration)\</IntDir>
+    <LibraryPath>$(SolutionDir)\dep\tinyxml\lib;$(SolutionDir)\dep\CEF\lib;$(LibraryPath)</LibraryPath>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <LinkIncremental>false</LinkIncremental>
+    <OutDir>$(SolutionDir)bin\$(Configuration)\</OutDir>
+    <IntDir>$(SolutionDir)tmp\$(ProjectName)\$(Configuration)\</IntDir>
+    <LibraryPath>$(SolutionDir)\dep\freetype\lib;$(SolutionDir)\dep\tinyxml\lib;$(SolutionDir)\dep\libRocket\lib;$(LibraryPath)</LibraryPath>
+    <IncludePath>$(IncludePath)</IncludePath>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <ClCompile>
+      <PrecompiledHeader>Use</PrecompiledHeader>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>Disabled</Optimization>
+      <PreprocessorDefinitions>WIN32;_DEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <MinimalRebuild>false</MinimalRebuild>
+      <PrecompiledHeaderFile>Precompiled.h</PrecompiledHeaderFile>
+      <RuntimeLibrary>MultiThreadedDebug</RuntimeLibrary>
+      <AdditionalIncludeDirectories>C:\Users\Aaron\digiPen\GAM 300_350\Improbablilty Drive Two_Point_Oh\src</AdditionalIncludeDirectories>
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <AdditionalDependencies>%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalLibraryDirectories>
+      </AdditionalLibraryDirectories>
+      <AdditionalOptions>/ignore:4099 %(AdditionalOptions)</AdditionalOptions>
+      <OptimizeReferences>false</OptimizeReferences>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <PrecompiledHeader>Use</PrecompiledHeader>
+      <Optimization>MaxSpeed</Optimization>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <PreprocessorDefinitions>WIN32;NDEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PrecompiledHeaderFile>Precompiled.h</PrecompiledHeaderFile>
+      <RuntimeLibrary>MultiThreaded</RuntimeLibrary>
+      <WholeProgramOptimization>true</WholeProgramOptimization>
+      <AdditionalIncludeDirectories>C:\Users\Aaron\digiPen\GAM 300_350\Improbablilty Drive Two_Point_Oh\src</AdditionalIncludeDirectories>
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+      <AdditionalLibraryDirectories>$(SolutionDir)dep\</AdditionalLibraryDirectories>
+      <AdditionalDependencies>%(AdditionalDependencies)</AdditionalDependencies>
+      <LinkTimeCodeGeneration>UseLinkTimeCodeGeneration</LinkTimeCodeGeneration>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\composition\composition.vcxproj">
+      <Project>{6df57bbf-e4ef-4163-9148-cc4b319ea836}</Project>
+    </ProjectReference>
+    <ProjectReference Include="..\containers\containers.vcxproj">
+      <Project>{2f9f41ae-f7ff-4de6-ada2-035279804fc9}</Project>
+    </ProjectReference>
+    <ProjectReference Include="..\core\core.vcxproj">
+      <Project>{9e126203-fe50-4ece-9969-198f2391fbc4}</Project>
+    </ProjectReference>
+    <ProjectReference Include="..\FileIO\FileIO.vcxproj">
+      <Project>{adeff98f-fcf7-4ff7-9fa9-108ac33a59fa}</Project>
+    </ProjectReference>
+    <ProjectReference Include="..\Graphics\Graphics.vcxproj">
+      <Project>{2824705e-ab0a-4ba6-a007-b2e6bb921a94}</Project>
+    </ProjectReference>
+    <ProjectReference Include="..\Input\Input.vcxproj">
+      <Project>{38b05569-3a7a-45a7-93cd-f4c384cfa4dc}</Project>
+    </ProjectReference>
+    <ProjectReference Include="..\LevelEditor\LevelEditor.vcxproj">
+      <Project>{817002cf-6dd8-4ae8-8739-4a2f328bb078}</Project>
+    </ProjectReference>
+    <ProjectReference Include="..\Logic\Logic.vcxproj">
+      <Project>{380694dc-5ad3-440c-9aa3-26c5f101e664}</Project>
+    </ProjectReference>
+    <ProjectReference Include="..\math\math.vcxproj">
+      <Project>{17ba5f90-069e-4029-b1bd-6c741d7fb794}</Project>
+    </ProjectReference>
+    <ProjectReference Include="..\Meta\Meta.vcxproj">
+      <Project>{ea4f15e6-1433-4f2e-8ca9-0e721fe8b90f}</Project>
+    </ProjectReference>
+    <ProjectReference Include="..\Physics\Physics.vcxproj">
+      <Project>{2fb4f56a-83f5-4630-bae3-5266443d089b}</Project>
+    </ProjectReference>
+    <ProjectReference Include="..\Python\Python.vcxproj">
+      <Project>{c2194039-185c-4818-9f38-ac4f4c58ae8f}</Project>
+    </ProjectReference>
+    <ProjectReference Include="..\Resource\Resource.vcxproj">
+      <Project>{476170e2-dd0c-4a6a-baa3-2d32faa2fca3}</Project>
+    </ProjectReference>
+    <ProjectReference Include="..\Sound\Sound.vcxproj">
+      <Project>{e935334b-6f06-4a58-9e0a-72a775029adc}</Project>
+    </ProjectReference>
+    <ProjectReference Include="..\Tile\Tile.vcxproj">
+      <Project>{b4487396-4e09-4ed0-8935-2370b32d60ef}</Project>
+    </ProjectReference>
+    <ProjectReference Include="..\UISystem\UISystem.vcxproj">
+      <Project>{631c22e5-5a99-499b-827f-e14d14b8b85f}</Project>
+    </ProjectReference>
+    <ProjectReference Include="..\utilities\utilities.vcxproj">
+      <Project>{65aa3e79-8346-4dc1-81c8-af40ae2a12b2}</Project>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="..\Logic\PlatformDropAction.cpp" />
+    <ClCompile Include="AxisCamera.cpp" />
+    <ClCompile Include="AxisCameraFollow.cpp" />
+    <ClCompile Include="CameraElevate.cpp" />
+    <ClCompile Include="CameraFollow.cpp" />
+    <ClCompile Include="GameSystem.cpp" />
+    <ClCompile Include="Main.cpp" />
+    <ClCompile Include="PlayerComponent.cpp" />
+    <ClCompile Include="PlayerFreezeAction.cpp" />
+    <ClCompile Include="Precompiled.cpp">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Create</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Create</PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="PresentationSystem.cpp" />
+    <ClCompile Include="RegisterMeta.cpp" />
+    <ClCompile Include="SetAxisAction.cpp" />
+    <ClCompile Include="SetVelocityAxis.cpp" />
+    <ClCompile Include="Test.cpp" />
+    <ClCompile Include="WaitForPropertyValue.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="..\Logic\PlatformDropAction.h" />
+    <ClInclude Include="AxisCamera.h" />
+    <ClInclude Include="AxisCameraFollow.h" />
+    <ClInclude Include="CameraElevate.h" />
+    <ClInclude Include="CameraFollow.h" />
+    <ClInclude Include="GameSystem.h" />
+    <ClInclude Include="PlayerComponent.h" />
+    <ClInclude Include="PlayerFreezeAction.h" />
+    <ClInclude Include="Precompiled.h" />
+    <ClInclude Include="PresentationSystem.h" />
+    <ClInclude Include="RegisterMeta.h" />
+    <ClInclude Include="SetAxisAction.h" />
+    <ClInclude Include="SetVelocityAxis.h" />
+    <ClInclude Include="Test.h" />
+    <ClInclude Include="WaitForPropertyValue.h" />
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>

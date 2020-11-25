@@ -1,0 +1,171 @@
+/*
+     Author: Jake Leonard Date: 2011/09/12
+     All content (c) 2010 DigiPen (USA) Corporation, all rights reserved.
+*/
+
+@font-face { font-family: EightOne; src: url( '../font/Eight One.ttf'); }
+@font-face { font-family: UniversElse; src: url( '../font/UniversElse.ttf'); }
+
+body
+{
+  color: black;
+  background-color: black;
+  z-index: 2;
+  overflow: hidden !important;
+}
+
+p
+{
+  cursor: default !important;
+}
+
+*
+{
+  user-select: none;
+  -khtml-user-select: none;
+  -o-user-select: none;
+  -moz-user-select: -moz-none;
+  -webkit-user-select: none;
+}
+
+::selection { background: transparent;color:inherit; }
+::-moz-selection { background: transparent;color:inherit; }
+
+/* MAIN MENU */
+.main_menu
+{
+  background-repeat: no-repeat;
+	background-image: url(../images/subduction.jpg);
+	background-size: cover;
+}
+
+.main_menu_wrapper
+{
+	margin-top: 40%;
+	background-position: top center;
+	text-align:center;
+  font-family: EightOne;
+}
+
+.version_number
+{
+  margin-top: 35%;
+  background-position: top center;
+  text-align:center;
+}
+
+/* OPTIONS */
+.option_menu_wrapper
+{
+	background-position: top center;
+	text-align:center;
+  background-size: cover;
+}
+
+.options-block
+{
+  color:white;
+  text-align: center;
+  display: inline-block;
+  border: 1px gray dotted;
+}
+
+select
+{
+  font-size: 19px;
+  color:black;
+  width:270px;
+}
+
+#controlSetting
+{
+  text-align: left !important;
+}
+
+/* PAUSE */
+.pause_menu_wrapper
+{
+	margin-top: 30%;
+  background-color: transparent;
+	background-position: top center;
+}
+
+.hud
+{
+  background-color: transparent;
+}
+
+/* PROMPTS */
+li
+{
+	list-style:none;
+}
+
+p
+{
+	min-width: 35%;
+	margin-bottom: 18px;
+	border-radius: 15px;
+	font-size: 16px;
+}
+
+button
+{
+  background-color:black;
+  min-width: 35%;
+  margin-bottom: 18px;
+  border-radius: 15px;
+  font-size: 16px;
+}
+
+.text_button
+{
+	color: gray;
+  /*font-family: "Univers Else" !important;*/
+  /*font-family: EightOne;*/
+  font-family: UniversElse;
+  font-weight:normal;
+  font-style:normal;
+  font-size:20px;
+}
+
+.button_selected, .text_button:hover
+{
+	color: white !important;
+}
+
+#prompt-container
+{
+  z-index: 500 !important;
+  position: absolute;
+  top: 15%;
+  left: 31%;
+  text-align: center;
+  display: block;
+  width: 40%;
+}
+
+.prompt
+{
+  border-radius: 25px;
+  border-width: 2px;
+  border: 8px;
+  margin-left: auto;
+  margin-right: auto;
+  background-color: rgba(192,192,192, 0.25);
+}
+.prompt-header
+{
+  font-size: 28px;
+  margin-bottom: 13px;
+  font-weight: bold;
+  color: red;
+}
+.prompt-text
+{
+  color: white;
+}
+.prompt-choices button
+{
+  margin-right: 4px;
+}

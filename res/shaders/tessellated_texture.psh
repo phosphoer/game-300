@@ -1,0 +1,39 @@
+#include "pixel_base.psh"
+float u_alpha_value;
+sampler s_texture;
+sampler s_edges;
+
+struct PixelIn
+{
+  float4 m_tex_coords      : TEXCOORD0;
+  float4 m_edge_tex_coords : TEXCOORD1;
+  float4 m_camera_position : TEXCOORD2;
+};
+
+float4 main(PixelIn i) : COLOR
+{
+  float4 text = tex2D(s_texture, CorrectTextureOffset(i.m_tex_coords));
+  float4 edge = tex2D(s_edges,   CorrectTextureOffset(i.m_edge_tex_coords.xyzw));
+  float4 corn = tex2D(s_edges,   CorrectTextureOffset(i.m_edge_tex_coords.zwxy));
+
+  float4 lit_color = float4(0.0f, 0.0f, 0.0f, 0.0f);
+  float4 diffuse_color = (text * (1.0f - edge.a) * (1.0f - corn.a) + 
+                          edge * (1.0f - corn.a) +
+                          corn);
+  float4 n = float4(0.0f, 0.0f, 1.0f, 0.0f);
+  float4 l = normalize(-i.m_camera_position);
+  float n_dot_l = dot(n, l);
+
+  lit_color += diffuse_color * clamp(n_dot_l, 0.0f, 1.0f);
+
+  float4 v = normalize(-i.m_camera_position);
+  float4 r = normalize(((2.0 * n_dot_l) * n) - l);
+  float r_dot_v = clamp(dot(r, v), 0.0f, 1.0f);
+
+  lit_color += pow(r_dot_v, 20.0f);
+
+  float attenuation = 1.0f / (1.0f + 0.4f * length(l) + 0.1f * length(l) * length(l));
+
+  lit_color *= attenuation;
+  return lit_color;
+}

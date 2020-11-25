@@ -1,0 +1,11 @@
+<Shader>
+  <Name>constant_color</Name>
+
+  <Type>Pixel</Type>
+
+  <File>constant_color.psh</File>
+
+  <Constants>
+    <Name>u_fill_color</Name>
+  </Constants>
+</Shader>

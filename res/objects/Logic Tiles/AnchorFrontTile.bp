@@ -1,0 +1,18 @@
+<Blueprint>
+  <Name>AnchorFrontTile</Name>
+
+  <Components>
+
+    <TileGameplayComponent>
+      <Default>-1</Default>
+      <AnchorAxis>2</AnchorAxis>
+      <TileType>5</TileType>
+    </TileGameplayComponent>
+
+    <SpriteComponent>
+      <Animation>FrontAnchorBlockAnimationSet.sad</Animation>
+    </SpriteComponent>
+    
+  </Components>
+
+</Blueprint>

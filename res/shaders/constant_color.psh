@@ -1,0 +1,7 @@
+#include "pixel_base.psh"
+float4 u_fill_color;
+
+float4 main() : COLOR
+{
+  return u_fill_color;
+}

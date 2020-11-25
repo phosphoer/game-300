@@ -1,0 +1,18 @@
+<Blueprint>
+  <Name>TopRotationTile</Name>
+
+  <Components>
+
+    <TileGameplayComponent>
+      <DefaultAxis>1</DefaultAxis>
+      <AnchorAxis>-1</AnchorAxis>
+      <TileType>3</TileType>
+    </TileGameplayComponent>
+
+    <SpriteComponent>
+      <Animation>RotationAnchorTopAnimationSet.sad</Animation>
+    </SpriteComponent>
+    
+  </Components>
+
+</Blueprint>

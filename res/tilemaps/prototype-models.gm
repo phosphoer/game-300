@@ -1,0 +1,10 @@
+<GraphicsMap>
+  <Element>
+    <Key>1</Key>
+    <Renderable>test-cube.ren</Renderable>
+  </Element>
+  <Element>
+    <Key>1</Key>
+    <Renderable>test-cube.ren</Renderable>
+  </Element>
+</GraphicsMap>

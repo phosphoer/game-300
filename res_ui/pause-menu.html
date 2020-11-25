@@ -1,0 +1,45 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<!-- 
+     Author: Jake Leonard & Nick Baldwin Date: 2011/09/12 
+     All content (c) 2010 DigiPen (USA) Corporation, all rights reserved.
+-->
+ <html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-type" content="text/html;charset=UTF-8" />
+    <link href="css/style.css" rel="stylesheet" type="text/css" / >
+    <title>Pause Menu</title>
+     
+    <script type="text/javascript" src="menu-core.js"></script>
+    <script type="text/javascript" src="prompts.js"></script>
+    <script type="text/javascript" src="pause.js"></script>
+  </head>
+  <body>
+    <div id="menu" class="pause_menu_wrapper">
+      <ul>
+        <li>
+          <p class="text_button" onclick='ResumeGame()'>Resume Game</p>
+        </li>
+        <li>
+          <p class="text_button" onclick='document.location = ("./howtoplay.html")'>How To Play</p>
+        </li>
+        <li>
+          <p class="text_button" onclick='document.location = ("./options.html")'>Options</p>
+        </li>
+        <li>
+          <p class="text_button" onclick='document.location = ("./credits.html")'>Credits</p>
+        </li>
+        <li>
+          <p class="text_button" onclick='CreatePrompt("main")'>Main Menu</p>
+        </li>
+        <li>
+          <p class="text_button" onclick='CreatePrompt("reset")'>Restart Game</p>
+        </li>
+        <li>
+          <p class="text_button" onclick='CreatePrompt("quit")'>Quit Game</p>
+        </li>
+      </ul>
+
+    </div>
+  </body>
+</html>

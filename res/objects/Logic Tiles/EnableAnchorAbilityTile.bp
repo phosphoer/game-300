@@ -1,0 +1,18 @@
+<Blueprint>
+  <Name>EnableAnchorAbilityTile</Name>
+
+  <Components>
+
+    <TileGameplayComponent>
+      <Default>-1</Default>
+      <AnchorAxis>-1</AnchorAxis>
+      <TileType>53</TileType>
+    </TileGameplayComponent>
+
+    <SpriteComponent>
+      <Animation>EnableRotationBlocksAnimationSet.sad</Animation>
+    </SpriteComponent>
+    
+  </Components>
+
+</Blueprint>

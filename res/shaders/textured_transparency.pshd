@@ -1,0 +1,12 @@
+<Shader>
+  <Name>textured_transparency</Name>
+
+  <Type>Pixel</Type>
+
+  <File>textured_transparency.psh</File>
+
+  <Constants>
+    <Name>u_alpha_value</Name>
+    <Name>s_sampler</Name>
+  </Constants>
+</Shader>

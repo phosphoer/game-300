@@ -1,0 +1,11 @@
+<Blueprint>
+  <Name>Splash Hotkeys</Name>
+  <IsSpaceable>false</IsSpaceable>
+
+  <Components>
+    <LogicComponent>
+      <ActionList>splash-hotkeys.lst</ActionList>
+    </LogicComponent>
+  </Components>
+
+</Blueprint>

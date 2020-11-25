@@ -1,0 +1,18 @@
+<Blueprint>
+  <Name>SideRotationTile</Name>
+
+  <Components>
+
+    <TileGameplayComponent>
+      <DefaultAxis>0</DefaultAxis>
+      <AnchorAxis>-1</AnchorAxis>
+      <TileType>2</TileType>
+    </TileGameplayComponent>
+
+    <SpriteComponent>
+      <Animation>RotationAnchorSideAnimationSet.sad</Animation>
+    </SpriteComponent>
+    
+  </Components>
+
+</Blueprint>

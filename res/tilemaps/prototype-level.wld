@@ -1,0 +1,71 @@
+<World>
+  <Layer>
+    <Type type="string">Collision</Type>
+    <File type="string">Proto2-col.map</File>
+  </Layer>
+
+  <Layer>
+    <Type type="string">Graphics</Type>
+    <File type="string">Proto2-graphics.map</File>
+  </Layer>
+  
+  <Layer>
+    <Type type="string">Special</Type>
+    <File type="string">Proto2-special.map</File>
+  </Layer>
+
+  <GraphicsMap>prototype-models.gm</GraphicsMap>
+  <FocusObject>Player</FocusObject>
+
+  <Object>
+    <Blueprint>player.bp</Blueprint>
+    <Name>Player</Name>
+    <TilePosition><X>17</X><Y>7</Y><Z>14</Z></TilePosition>
+  </Object>
+
+  <Object>
+    <Blueprint>follow-camera.bp</Blueprint>
+    <Name>X-Camera</Name>
+    <TilePosition>
+      <X>0</X>
+      <Y>0</Y>
+      <Z>0</Z>
+    </TilePosition>
+  </Object>
+
+  <Object>
+    <Blueprint>follow-camera.bp</Blueprint>
+    <Name>Y-Camera</Name>
+    <TilePosition>
+      <X>0</X>
+      <Y>0</Y>
+      <Z>0</Z>
+    </TilePosition>
+  </Object>
+
+  <Object>
+    <Blueprint>follow-camera.bp</Blueprint>
+    <Name>Z-Camera</Name>
+    <TilePosition>
+      <X>0</X>
+      <Y>0</Y>
+      <Z>0</Z>
+    </TilePosition>
+  </Object>
+
+  <Object>
+    <Blueprint>axis-camera.bp</Blueprint>
+    <Name>Axis-Camera</Name>
+    <TilePosition>
+      <X>0</X>
+      <Y>0</Y>
+      <Z>0</Z>
+    </TilePosition>
+  </Object>
+  
+  <Object>
+    <Blueprint>game-hotkeys.bp</Blueprint>
+    <Name>GameHotkeys</Name>
+    <TilePosition><X>0</X><Y>0</Y><Z>0</Z></TilePosition>
+  </Object>
+</World>

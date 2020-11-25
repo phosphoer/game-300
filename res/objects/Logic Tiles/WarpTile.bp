@@ -1,0 +1,18 @@
+<Blueprint>
+  <Name>WarpTile</Name>
+
+  <Components>
+
+    <TileGameplayComponent>
+      <DefaultAxis>-1</DefaultAxis>
+      <AnchorAxis>-1</AnchorAxis>
+      <TileType>55</TileType>
+    </TileGameplayComponent>
+
+    <SpriteComponent>
+      <Animation>WarpTileAnimationSet.sad</Animation>
+    </SpriteComponent>
+    
+  </Components>
+
+</Blueprint>

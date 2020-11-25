@@ -1,0 +1,17 @@
+<Blueprint>
+  <Name>Slide</Name>
+  <Position><X>2.5</X><Y>3.5</Y><Z>0.5</Z></Position>
+
+  <Components>
+
+    <UIComponent>
+      <Size><X>800</X><Y>600</Y></Size>
+    </UIComponent>
+
+    <LogicComponent>
+      <ActionList>splash-actions.lst</ActionList>
+    </LogicComponent>
+    
+  </Components>
+
+</Blueprint>

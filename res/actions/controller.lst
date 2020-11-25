@@ -1,0 +1,73 @@
+<ActionList>
+
+  <SetVelocityAxis>
+    <LifeTime>0.0</LifeTime>
+    <IsBlocking>false</IsBlocking>
+    <OnActionDown>PlayerMoveRight</OnActionDown>
+    <IgnoreZeroes>true</IgnoreZeroes>
+    <Speed>
+      <X>4.25</X> <Y>0.0</Y> <Z>0.0</Z>
+    </Speed>
+  </SetVelocityAxis>
+
+  <SetVelocityAxis>
+    <LifeTime>0.0</LifeTime>
+    <IsBlocking>false</IsBlocking>
+    <OnActionDown>PlayerMoveLeft</OnActionDown>
+    <IgnoreZeroes>true</IgnoreZeroes>
+    <Speed>
+      <X>-4.25</X> <Y>0.0</Y> <Z>0.0</Z>
+    </Speed>
+  </SetVelocityAxis>
+
+  <SetVelocityAxis>
+    <LifeTime>0.0</LifeTime>
+    <IsBlocking>false</IsBlocking>
+    <OnActionDown>PlayerMoveUp</OnActionDown>
+    <IgnoreZeroes>true</IgnoreZeroes>
+    <Speed>
+      <X>0.0</X> <Y>-4.25</Y> <Z>0.0</Z>
+    </Speed>
+  </SetVelocityAxis>
+
+  <SetVelocityAxis>
+    <LifeTime>0.0</LifeTime>
+    <IsBlocking>false</IsBlocking>
+    <OnActionDown>PlayerMoveDown</OnActionDown>
+    <IgnoreZeroes>true</IgnoreZeroes>
+    <Speed>
+      <X>0.0</X> <Y>4.25</Y> <Z>0.0</Z>
+    </Speed>
+  </SetVelocityAxis>
+
+  <JumpAction>
+    <LifeTime>0.0</LifeTime>
+    <IsBlocking>false</IsBlocking>
+    <OnActionDown>PlayerJump</OnActionDown>
+    <Power>6.25</Power>
+    <MinDuration>.1</MinDuration>
+    <MaxDuration>.3</MaxDuration>
+  </JumpAction>
+
+  <PlatformDropAction>
+    <LifeTime>0.0</LifeTime>
+    <IsBlocking>false</IsBlocking>
+    <OnActionDown>PlayerDrop</OnActionDown>
+    <IgnoreZeroes>true</IgnoreZeroes>
+    <Speed>
+      <X>0.0</X>
+      <Y>4.25</Y>
+      <Z>0.0</Z>
+    </Speed>
+  </PlatformDropAction>
+
+  <WaitForPropertyValue>
+    <LifeTime>0.0</LifeTime>
+    <IsBlocking>false</IsBlocking>
+    <IgnoreZeroes>true</IgnoreZeroes>
+    <Field>m_axis</Field>
+    <Component>TileComponent</Component>
+    <Value>1</Value>
+  </WaitForPropertyValue>
+
+</ActionList>

@@ -1,0 +1,9 @@
+<Shader>
+  <Name>expanded_texture</Name>
+
+  <Type>Vertex</Type>
+
+  <File>expanded_texture.vsh</File>
+
+  <Constants></Constants>
+</Shader>

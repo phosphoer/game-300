@@ -1,0 +1,10 @@
+<ActionList>
+
+  <PopSpaceAction>
+    <LifeTime>0.0</LifeTime>
+    <IsBlocking>false</IsBlocking>
+    <OnKeyPressed>kKeyTab</OnKeyPressed>
+    <IsDeep>true</IsDeep>
+  </PopSpaceAction>  
+
+</ActionList>

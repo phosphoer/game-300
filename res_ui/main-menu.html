@@ -1,0 +1,39 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<!-- 
+     Author: Jake Leonard Date: 2011/09/12 
+     All content (c) 2010 DigiPen (USA) Corporation, all rights reserved.
+-->
+ <html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-type" content="text/html;charset=UTF-8" />
+    <link href="css/style.css" rel="stylesheet" type="text/css" />
+    <title>Main Menu</title>
+     
+    <script type="text/javascript" src="menu-core.js"></script>
+    <script type="text/javascript" src="prompts.js"></script>
+  </head>
+  <body class="main_menu">
+    <div id="menu" class="main_menu_wrapper">
+      <ul>
+        <li>
+          <p class="text_button" onclick='LoadGame();'>Game</p>
+        </li>
+        <li>
+          <p class="text_button" onclick='document.location = ("./options.html")'>Options</p>
+        </li>
+        <li>
+          <p class="text_button" onclick='document.location = ("./credits.html")'>Credits</p>
+        </li>
+        <li>
+          <p class="text_button" onclick='CreatePrompt("quit")'>Quit</p>
+        </li>
+      </ul>
+
+    </div>
+    <p class="prompt-text" style="position: absolute !important; top: 0px !important">Final v1.5</p>
+    <div style="display: none !important;">
+      <audio id="mainMenuBGM" src="audio/mainMenu.ogg" autoplay="autoplay" loop="loop"></audio>
+    </div>
+  </body>
+</html>

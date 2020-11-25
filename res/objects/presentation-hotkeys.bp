@@ -1,0 +1,11 @@
+<Blueprint>
+  <Name>Presentation Hotkeys</Name>
+  <IsSpaceable>false</IsSpaceable>
+
+  <Components>
+    <LogicComponent>
+      <ActionList>presentation-hotkeys.lst</ActionList>
+    </LogicComponent>
+  </Components>
+
+</Blueprint>

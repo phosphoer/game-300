@@ -1,0 +1,14 @@
+<Shader>
+  <Name>sphere_light</Name>
+
+  <Type>Pixel</Type>
+
+  <File>sphere_light.psh</File>
+
+  <Constants>
+    <Name>s_g_buffer</Name>
+    <Name>u_light_position</Name>
+    <Name>u_light_diffuse</Name>
+    <Name>u_light_attenuation</Name>
+  </Constants>
+</Shader>

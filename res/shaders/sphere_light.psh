@@ -1,0 +1,45 @@
+#include "pixel_base.psh"
+sampler s_g_buffer;
+float4 u_light_position;
+float4 u_light_diffuse;
+float3 u_light_attenuation;
+
+struct PixelIn
+{
+  float2 m_position        : VPOS;
+  float4 m_camera_position : TEXCOORD;	
+};
+
+float4 main(PixelIn i) : COLOR
+{
+  float4 color = tex2D(s_g_buffer, GetDeviceCoordinates(i.m_position));
+
+  float4 n = float4(0.0f, 0.0f, 1.0f, 0.0f);
+  float4 v = normalize(-i.m_camera_position);
+
+  float4 l = u_light_position - i.m_camera_position;
+
+  float n_dot_l = dot(n, normalize(l));
+
+  float4 r = normalize(((2.0 * n_dot_l) * n) - l);
+  
+  float r_dot_v = clamp(dot(r, v), 0.0f, 1.0f);
+
+  return float4(r_dot_v, r_dot_v, r_dot_v, 1.0f);
+
+  color *= clamp(n_dot_l, 0.0f, 1.0f);
+
+  color += pow(r_dot_v, 20.0f);
+
+  //float att = 1.0f - clamp((length(l) / u_light_attenuation.x), 0.0f, 1.0f);// + 
+                   //u_light_attenuation.y * length(l) +
+                   //u_light_attenuation.z * length(l) * length(l));
+
+  //return float4(att, att, att, 1.0f);
+
+  //return float4(normalize(l).xyz, 1.0f);
+
+  //return float4(GetDeviceCoordinates(i.m_position), 1.0f, 1.0f);
+
+  return color;
+}

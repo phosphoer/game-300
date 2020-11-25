@@ -1,0 +1,23 @@
+<Blueprint>
+  <Name>CollectibleTile</Name>
+
+  <Components>
+
+    <TileGameplayComponent>
+      <Default>-1</Default>
+      <AnchorAxis>-1</AnchorAxis>
+      <TileType>7</TileType>
+    </TileGameplayComponent>
+
+    <SpriteComponent>
+      <Animation>CollectibleAnimationSet.sad</Animation>
+    </SpriteComponent>
+
+    <LightComponent>
+      <Radius>2.0</Radius>
+      <Diffuse><X>1.0</X><Y>1.0</Y><Z>1.0</Z><W>1.0</W></Diffuse>
+    </LightComponent>
+    
+  </Components>
+
+</Blueprint>

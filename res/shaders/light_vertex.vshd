@@ -1,0 +1,9 @@
+<Shader>
+  <Name>light_vertex</Name>
+
+  <Type>Vertex</Type>
+
+  <File>light_vertex.vsh</File>
+
+  <Constants></Constants>
+</Shader>

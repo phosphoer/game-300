@@ -1,0 +1,36 @@
+<Blueprint>
+  <Name>Player</Name>
+  <Position><X>0.0</X><Y>0.0</Y><Z>0.0</Z></Position>
+
+  <Components>
+    <DynamicComponent>
+      <Mass>2.0</Mass>
+      <Restitution>0.0</Restitution>
+      <Friction>0.3</Friction>
+      <Acceleration>75.0</Acceleration>
+    </DynamicComponent>
+
+    <TileComponent>
+      <Width>1</Width>
+      <Height>1</Height>
+      <Depth>1</Depth>
+      <AnchorRange>9</AnchorRange>
+    </TileComponent>
+
+    <LogicComponent>
+      <ActionList>controller.lst</ActionList>
+    </LogicComponent>
+
+    <SpriteComponent>
+      <Animation>PlayerAnimationSet.sad</Animation>
+    </SpriteComponent>
+    
+    <PlayerComponent>
+    </PlayerComponent>
+
+    <SoundEmitter />
+    
+    <ListenerComponent />
+  </Components>
+
+</Blueprint>

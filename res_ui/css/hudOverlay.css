@@ -1,0 +1,91 @@
+/*
+     Author: Jake Leonard Date: 2011/09/12 
+     All content (c) 2010 DigiPen (USA) Corporation, all rights reserved.
+*/
+body
+{
+  background-color: transparent;
+  overflow: hidden !important;
+  height: 100%;
+  width: 100%;
+}
+
+.hudObject
+{
+  display: inline-block;
+  position: fixed;
+  z-index: 400;
+  color: white;
+  margin-right: 6px;
+}
+
+.hudObject p
+{
+  margin-left: 5px;
+  margin-right: 5px;
+  font-size: 16pt;
+  text-align: left;
+}
+
+/* COIN STUFF */
+#coinHolder
+{
+  clear: block;
+  position: static;
+  background-color: rgba(0,0,0,0.1);
+}
+
+.coin
+{
+  clear: block;
+  display: inline-block;
+  margin-top: 2px;
+  margin-right: 5px;
+  border: 0;
+  background-image: url(../images/coins.png);
+  background-repeat: no-repeat;
+  width: 16px;
+  height: 16px;
+}
+
+.unlit
+{
+  background-position: -0px -27px;
+}
+
+.lit
+{
+  background-position: -0px -0px;
+}
+
+.textonly
+{
+  background-color: rgba(0,0,0,0.3);
+}
+
+.centertext
+{
+  text-align: center !important;
+}
+
+.narration
+{
+  z-index: 500 !important;
+}
+
+.textbox
+{
+  border: 1px solid #565656;
+  background-color: rgba(51,51,51,0.8);
+  box-shadow: 5px 8px 5px #111;
+}
+
+*[align="left"]
+{
+  margin-right: 5px;
+}
+
+*[align="right"]
+{
+  margin-left: 5px;
+}

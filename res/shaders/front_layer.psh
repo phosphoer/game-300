@@ -1,0 +1,37 @@
+#include "pixel_base.psh"
+static const float k_alpha = .35f;
+static const float k_brightness_scalar = 1.0f;
+static const float4 k_luminance_transform = float4(0.33f, 0.34f, 0.33f, 0.0f);
+static const float3 k_greyscale_intensity = float3(1.0f, 1.0f, 1.0f);
+static const float k_lightness_addition = 0.15f;
+static const float k_lightness_max = 0.50f;
+float u_lightness;
+float u_alpha;
+sampler s_edges;
+
+struct PixelIn
+{
+  float4 m_tex_coords	   : TEXCOORD0;
+  float4 m_edge_tex_coords : TEXCOORD1;
+};
+
+float4 main(PixelIn i) : COLOR
+{
+  // get the colors from each texture
+  float4 edge = tex2D(s_edges, CorrectTextureOffset(i.m_edge_tex_coords.xyzw));
+  float4 corn = tex2D(s_edges, CorrectTextureOffset(i.m_edge_tex_coords.zwxy));
+
+  // combine the textures
+  float4 color = (k_brightness_scalar*(1.0f - edge.a) * (1.0f - corn.a) + 
+			            edge * (1.0f - corn.a) +
+                  corn);
+
+  // get the luminance
+  float luminance = dot(color, k_luminance_transform);
+  
+  // get the desaturated value and apply alpha
+  color = float4(luminance * k_greyscale_intensity + color.xyz * (1.0f - k_greyscale_intensity), color.w * u_alpha * k_alpha);
+
+  // change lightness (only works if fully desaturated)
+  return float4(((u_lightness*k_lightness_max) + k_lightness_addition) * color.xyz, color.w);
+}

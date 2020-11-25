@@ -1,0 +1,7 @@
+#include "pixel_base.psh"
+sampler s_sampler;
+
+float4 main(float4 i : TEXCOORD) : COLOR
+{
+  return tex2D(s_sampler, CorrectTextureOffset(i));
+}

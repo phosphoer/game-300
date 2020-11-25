@@ -1,0 +1,10 @@
+<WarpTileAnimationSet>
+
+	<Texture>warp-spritesheet.png</Texture>
+	<Tracks>
+		<Default>6</Default>
+	</Tracks>
+	<StartTrack>0</StartTrack>
+	<StartFrame>0</StartFrame>
+
+</WarpTileAnimationSet>

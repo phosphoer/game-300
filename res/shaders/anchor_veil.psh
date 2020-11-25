@@ -1,0 +1,7 @@
+#include "pixel_base.psh"
+static const float4 k_color = float4(1.f, 0.8471f, 0.0f, 0.35f);
+
+float4 main() : COLOR
+{
+  return k_color;
+}

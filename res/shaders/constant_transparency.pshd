@@ -1,0 +1,12 @@
+<Shader>
+  <Name>constant_transparency</Name>
+
+  <Type>Pixel</Type>
+
+  <File>constant_transparency.psh</File>
+
+  <Constants>
+    <Name>u_alpha_value</Name>
+    <Name>s_sampler</Name>
+  </Constants>
+</Shader>

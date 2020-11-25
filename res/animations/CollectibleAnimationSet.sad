@@ -1,0 +1,10 @@
+<CollectibleAnimationSet>
+
+	<Texture>CollectibleOrbSpriteSheet.png</Texture>
+	<Tracks>
+		<Default>2</Default>
+	</Tracks>
+	<StartTrack>0</StartTrack>
+	<StartFrame>0</StartFrame>
+
+</CollectibleAnimationSet>

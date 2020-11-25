@@ -1,0 +1,12 @@
+#include "pixel_base.psh"
+sampler s_g_buffer;
+
+struct PixelIn
+{
+  float4 m_position        : VPOS;
+};
+
+float4 main(PixelIn i) : COLOR
+{
+  return tex2D(s_g_buffer, GetDeviceCoordinates(i.m_position));
+}

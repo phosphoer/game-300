@@ -1,0 +1,11 @@
+<Shader>
+  <Name>animation</Name>
+
+  <Type>Vertex</Type>
+
+  <File>animation.vsh</File>
+
+  <Constants>
+    <Name>u_texture_matrix</Name>
+  </Constants>
+</Shader>

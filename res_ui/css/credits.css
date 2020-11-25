@@ -1,0 +1,61 @@
+/*
+     Author: Jake Leonard Date: 2011/09/12 
+     All content (c) 2010 DigiPen (USA) Corporation, all rights reserved.
+*/
+@font-face { font-family: EightOne; src: url( '../font/Eight One.ttf'); }
+@font-face { font-family: UniversElse; src: url( '../font/UniversElse.ttf'); }
+
+*
+{
+  cursor: default !important;
+}
+
+body
+{
+  -webkit-transition: all 85.2s ease-in-out 1.6s;
+  background-color: black;
+  overflow: hidden;
+}
+
+body:hover
+{
+  background-color: darkgrey;
+  overflow: hidden;
+}
+
+#scrollingCredits
+{
+  text-align: center;
+  color: white;
+  font-family: UniversElse;
+  height: 100%;
+  -webkit-marquee-repetition: 1;
+}
+
+span
+{
+  font-size: small;
+  color: gray;
+}
+
+ul
+{
+  list-style: none;
+}
+
+#improbTeam li
+{
+  margin-right: 45px !important;
+}
+
+li
+{
+  margin-right: 35px;
+  margin-top: 10px;
+}
+
+div
+{
+  font-size: 20px;
+}
+

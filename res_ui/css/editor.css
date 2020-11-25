@@ -1,0 +1,95 @@
+/*
+     Author: Jake Leonard Date: 2012/09/12 
+     All content (c) 2012 DigiPen (USA) Corporation, all rights reserved.
+*/
+
+*
+{
+   -moz-user-select: -moz-none;
+   -khtml-user-select: none;
+   -webkit-user-select: none;
+   background-color: transparent !important;
+   cursor: default !important;
+}
+
+body
+{
+  overflow: hidden;
+}
+
+::selection { background: transparent;color:inherit; }
+::-moz-selection { background: transparent;color:inherit; }
+
+#exitbutton
+{
+  opacity: .80 !important;
+  z-index: 15;
+  position: absolute;
+  padding: 2px;
+  top: 1%;
+  left: 11px;
+  border: 1px solid;
+  border-radius: 3px;
+  color: red;
+  background-color: gray;
+  font-size: 16px;
+  text-align: center;
+}
+
+#objectList
+{
+  overflow-y: scroll; 
+  height: 93%;
+  overflow-x: hidden;
+  border: 2px solid;
+  border-radius: 12px;
+  float: right;
+  width: 20%;
+  opacity: .70 !important;
+  z-index: 25;
+}
+
+#objectList a
+{
+  border: 1px dotted;
+  opacity: 1 !important;
+  z-index: 35;
+  display: inline-block;
+  width: 50%;
+}
+
+#toolsbar
+{
+  overflow: hidden;
+  position: fixed;
+  left: 25%;
+  margin-left:auto;
+  margin-right:auto;
+  bottom: 5%;
+  z-index: 25;
+  opacity: .65 !important;
+  border: 2px solid;
+  width: 38%;
+  height: 75px;
+}
+
+#toolsbar div
+{
+  width: 33.33%;
+  text-align: center;
+  color: black;
+  display: inline-block;
+  height: 100%;
+  font-size: 18px;
+}
+
+.selected-tool, .selected-obj
+{
+  background-color: rgba(255,0,0,0.75) !important;
+  font-weight: bold;
+}
+
+.tool
+{
+  background-color: rgba(255,255,255,0.60) !important;
+}

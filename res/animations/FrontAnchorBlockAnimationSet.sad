@@ -1,0 +1,10 @@
+<FrontAnchorBlockAnimationSet>
+
+	<Texture>FrontAnchorBlockSpriteSheet.png</Texture>
+	<Tracks>
+		<Default>3</Default>
+	</Tracks>
+	<StartTrack>0</StartTrack>
+	<StartFrame>2</StartFrame>
+
+</FrontAnchorBlockAnimationSet>

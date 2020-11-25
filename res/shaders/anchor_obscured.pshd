@@ -1,0 +1,13 @@
+<Shader>
+  <Name>anchor_obscured</Name>
+
+  <Type>Pixel</Type>
+
+  <File>anchor_obscured.psh</File>
+
+  <Constants>
+    <Name>u_alpha</Name>
+    <Name>s_texture</Name>
+    <Name>s_edges</Name>
+  </Constants>
+</Shader>

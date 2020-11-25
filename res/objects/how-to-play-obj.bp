@@ -1,0 +1,11 @@
+<Blueprint>
+  <Name>HowToPlay Obj</Name>
+  <IsSpaceable>false</IsSpaceable>
+
+  <Components>
+    <LogicComponent>
+      <ActionList>how-to-play-screen.lst</ActionList>
+    </LogicComponent>
+  </Components>
+
+</Blueprint>

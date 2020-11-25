@@ -1,0 +1,8 @@
+#include "pixel_base.psh"
+float u_alpha_value;
+sampler s_sampler;
+
+float4 main(float4 i : TEXCOORD) : COLOR
+{
+  return tex2D(s_sampler, i.xy) * float4(1.0f,1.0f,1.0f, u_alpha_value);
+}

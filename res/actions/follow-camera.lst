@@ -1,0 +1,10 @@
+<ActionList>
+
+  <CameraFollow>
+    <LifeTime>0.0</LifeTime>
+    <IsBlocking>false</IsBlocking>
+    <ObjectName>Player</ObjectName>
+    <Distance>8</Distance>
+  </CameraFollow>
+
+</ActionList>

@@ -1,0 +1,13 @@
+<EnableRotationBlocksAnimationSet>
+
+	<Texture>AbilityBlockSpriteSheet.png</Texture>
+	<Tracks>
+		<Off>1</Off>
+    	<On>1</On>
+    	<Active>1</Active>
+    	<Used>1</Used>
+	</Tracks>
+	<StartTrack>0</StartTrack>
+	<StartFrame>0</StartFrame>
+
+</EnableRotationBlocksAnimationSet>

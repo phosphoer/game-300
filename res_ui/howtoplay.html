@@ -1,0 +1,92 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<!-- 
+     Author: Jake Leonard Date: 2011/09/12 
+     All content (c) 2010 DigiPen (USA) Corporation, all rights reserved.
+-->
+ <html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-type" content="text/html;charset=UTF-8" />
+    <link href="css/style.css" rel="stylesheet" type="text/css" />
+    <link href="css/howtoplay.css" rel="stylesheet" type="text/css" />
+    <title>How to play</title>
+    <script type="text/javascript" src="menu-core.js"></script>
+    <script type="text/javascript">
+      function HTPLoadImage(configSetting)
+      {
+        var helpimage = document.getElementById("playconfig");
+        switch(configSetting)
+        {
+          default:
+          case 0:
+            helpimage.src = "images/How-To-Play_Normal_Positional.png";
+          break;
+          case 1:
+            helpimage.src = "images/How-To-Play_Southpaw_Directional.png";
+          break;
+          case 2:
+            helpimage.src = "images/How-To-Play_Southpaw_Positional.png";
+          break;
+          case 3:
+            helpimage.src = "images/How-To-Play_Normal_Directional.png";
+          break;
+        }
+      }
+      function BlockSpace(event)
+      {
+        var keyCode = event.keyCode;
+        if(keyCode == 32)
+        {
+          event.preventDefault();
+          return;
+        }
+        if(keyCode == 65)
+        {
+          window.location.reload();
+          return;
+        }
+      }
+      function HTPCoreStart()
+      {
+        window.AddImprobabilityListener("OnRecieveControllerConfig", HTPLoadImage);
+        window.DispatchImprobabilityEvent("OnQueryControllerConfig");
+      }
+      document.addEventListener("DOMContentLoaded", HTPCoreStart, false);
+      document.addEventListener("keydown", BlockSpace, false);
+    </script>
+  </head>
+  <body>
+    <div>
+      <center><h1 id="h2ptitle">How to Play</h1></center>
+      
+      <!-- CONTROLS -->
+      <div class="box-border controls-box">
+        <h2 style="z-index: 500; margin-left: 10px;">Controls</h2>
+        <img width="100%" height="100%" style="margin-left: -90px;" id="playconfig" alt="Controls" src="images/How-To-Play_Normal_Directional.png">
+      </div>
+      
+      <!-- OBJECTIVE -->
+      <div class="box-border objective-box">
+        <h2>Objective</h2>
+        <p>Collect "peaces" to gain new powers and access new areas</p>
+      </div>
+      
+      <!-- INSTRUCTIONS -->
+      <div class="box-border instructions-box">
+        <h2>Instructions</h2>
+        <ul>
+        <li>Use perspective switching to explore the world</li>
+        <li>If stuck, change perspectives or press BACKSPACE to return to the HUB</li>
+        <li>Don't forget about all three perspectives!</li>
+        </ul>
+      </div>
+      
+      <!-- BACK -->
+      <div id="backbutton">
+        <p class="text_button" style="width:120px !important; position: absolute !important; top: -150px !important;" onclick='window.history.back();'>&lt; Back</p>
+      </div>
+      
+    </div>
+  </body>
+ </html>
+ 

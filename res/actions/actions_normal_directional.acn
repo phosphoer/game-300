@@ -1,0 +1,17 @@
+<InputActions>
+
+  <kKeyA>PlayerMoveLeft</kKeyA>
+  <kKeyW>PlayerMoveUp</kKeyW>
+  <kKeyD>PlayerMoveRight</kKeyD>
+  <kKeyS>PlayerMoveDown</kKeyS>
+  <kKeyS>PlayerDrop</kKeyS>
+  <kKeySpace>PlayerJump</kKeySpace>
+  
+  <kKeyLeft>AxisChangeLeft</kKeyLeft>
+  <kKeyUp>AxisChangeUp</kKeyUp>
+  <kKeyRight>AxisChangeRight</kKeyRight>
+  <kKeyDown>AxisChangeDown</kKeyDown>
+
+  <kKeyEscape>Pause</kKeyEscape>
+
+</InputActions>

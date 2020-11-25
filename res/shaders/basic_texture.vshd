@@ -1,0 +1,9 @@
+<Shader>
+  <Name>basic_texture</Name>
+
+  <Type>Vertex</Type>
+
+  <File>basic_texture.vsh</File>
+
+  <Constants></Constants>
+</Shader>

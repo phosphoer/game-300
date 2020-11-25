@@ -1,0 +1,18 @@
+<Blueprint>
+  <Name>AnchorSideTile</Name>
+
+  <Components>
+
+    <TileGameplayComponent>
+      <Default>-1</Default>
+      <AnchorAxis>0</AnchorAxis>
+      <TileType>6</TileType>
+    </TileGameplayComponent>
+
+    <SpriteComponent>
+      <Animation>SideAnchorBlockAnimationSet.sad</Animation>
+    </SpriteComponent>
+    
+  </Components>
+
+</Blueprint>

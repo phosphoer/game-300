@@ -1,0 +1,23 @@
+<ActionList>  
+
+  <PushSpaceAction>
+    <LifeTime>0.0</LifeTime>
+    <IsBlocking>false</IsBlocking>
+    <OnActionPressed>SkipPresentation</OnActionPressed>
+    <Name>main-menu-space.spc</Name>
+    <IsDeep>false</IsDeep>
+  </PushSpaceAction>
+
+  <WaitAction>
+    <LifeTime>10.0</LifeTime>
+    <IsBlocking>true</IsBlocking>
+  </WaitAction>
+
+  <PushSpaceAction>
+    <LifeTime>0.0</LifeTime>
+    <IsBlocking>false</IsBlocking>
+    <Name>main-menu-space.spc</Name>
+    <IsDeep>false</IsDeep>
+  </PushSpaceAction>
+
+</ActionList>

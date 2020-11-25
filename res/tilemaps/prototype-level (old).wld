@@ -1,0 +1,32 @@
+<World>
+  <Layer>
+    <Type type="string">Collision</Type>
+    <File type="string">Proto2-col.map</File>
+  </Layer>
+
+  <Layer>
+    <Type type="string">Graphics</Type>
+    <File type="string">Proto2-col.map</File>
+  </Layer>
+
+  <GraphicsMap>prototype-models.gm</GraphicsMap>
+  <FocusObject>Player</FocusObject>
+
+  <Object>
+    <Blueprint>player.bp</Blueprint>
+    <Name>Player</Name>
+    <TilePosition><X>33</X><Y>65</Y><Z>61</Z></TilePosition>
+  </Object>
+
+  <Object>
+    <Blueprint>game-camera.bp</Blueprint>
+    <Name>Camera</Name>
+    <TilePosition><X>0</X><Y>0</Y><Z>0</Z></TilePosition>
+  </Object>
+  
+  <Object>
+    <Blueprint>game-hotkeys.bp</Blueprint>
+    <Name>GameHotkeys</Name>
+    <TilePosition><X>0</X><Y>0</Y><Z>0</Z></TilePosition>
+  </Object>
+</World>

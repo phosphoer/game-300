@@ -1,0 +1,69 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<!-- 
+     Author: Jake Leonard Date: 2011/09/12 
+     All content (c) 2010 DigiPen (USA) Corporation, all rights reserved.
+-->
+ <html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-type" content="text/html;charset=UTF-8" />
+    <link href="css/style.css" rel="stylesheet" type="text/css" />
+    <title>Options Menu</title>
+     
+    <script type="text/javascript" src="menu-core.js"></script>
+    <script type="text/javascript" src="prompts.js"></script>
+    <script type="text/javascript" src="options.js"></script>
+    <style>
+    .option_menu_wrapper .text_button
+    {
+      color: lightgray;
+    }
+    button
+    {
+     background-color: white !important;
+    }
+    </style>
+  </head>
+  <body class="main_menu">
+    <div id="menu" class="option_menu_wrapper">
+      <center><h1 style="color: white;">OPTIONS</h1></center>
+      <div style="color:white;text-align: center">
+        <!-- GRAPHICS -->
+        <div class="options-block" style="float: left; width: 40%; margin-top: 20px; margin-left: 5px;">
+          <h2>Graphics Settings</h2>
+          <h3>Resolutions</h3>
+          <select id="resolutions" size="6" multiple="false">
+          </select>
+          <div style="font-size: 20px; color:white;" ><br />
+            Fullscreen <button id="FullscreenToggle">TEST</button> <input type="hidden" id="fullscreen" name="fullscreen" />
+          </div>
+        </div>
+        <br />
+        <!-- CONTROLS 
+        <div class="options-block" style="width: 50%">
+          <h2>Control Settings</h2>
+          <div id="controlSetting">
+            <input type="radio" name="controller">Normal</input><br />
+            <input type="radio" name="controller">Southpaw-Directional</input><br />
+            <input type="radio" name="controller">Southpaw-Positional</input><br />
+            <input type="radio" name="controller">Normal-Positional</input><br />
+          </div>
+        </div>
+        -->
+        <!-- SOUND -->
+        <div class="options-block" style="margin-top: 25px; width: 50%">
+          <h2>Sound Settings</h2>
+          <div style="font-size: 20px; color:white;" ><br />
+             Mute Audio <button id="audioToggle">TEST</button> <input type="hidden" id="audiomute" />
+          </div>
+        </div>
+      </div>
+      <br />
+      <!-- SAVE -->
+      <div style="margin-top: 50px; text-align: center; display: block;">
+          <p class="text_button" onclick='OptionsSave()'>Apply</p>
+          <p class="text_button" onclick='GoBackToLast()'>Cancel</p>
+      </div>
+    </div>
+  </body>
+</html>

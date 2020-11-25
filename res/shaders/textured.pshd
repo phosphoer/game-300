@@ -1,0 +1,11 @@
+<Shader>
+  <Name>textured</Name>
+
+  <Type>Pixel</Type>
+
+  <File>textured.psh</File>
+
+  <Constants>
+    <Name>s_sampler</Name>
+  </Constants>
+</Shader>

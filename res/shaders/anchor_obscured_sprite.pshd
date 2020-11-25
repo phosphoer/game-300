@@ -1,0 +1,12 @@
+<Shader>
+  <Name>anchor_obscured_sprite</Name>
+
+  <Type>Pixel</Type>
+
+  <File>anchor_obscured_sprite.psh</File>
+
+  <Constants>
+    <Name>u_alpha</Name>
+    <Name>s_sampler</Name>
+  </Constants>
+</Shader>

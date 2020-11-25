@@ -1,0 +1,13 @@
+<Shader>
+  <Name>tessellated_texture</Name>
+
+  <Type>Pixel</Type>
+
+  <File>tessellated_texture.psh</File>
+
+  <Constants>
+    <Name>u_alpha_value</Name>
+    <Name>s_texture</Name>
+    <Name>s_edges</Name>
+  </Constants>
+</Shader>

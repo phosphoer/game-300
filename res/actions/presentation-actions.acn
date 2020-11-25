@@ -1,0 +1,5 @@
+<InputActions>
+  <kKeyEnter>SkipPresentation</kKeyEnter>
+  <kKeySpace>SkipSlide</kKeySpace>
+  <kKeyBackspace>BackupSlide</kKeyBackspace>
+</InputActions>

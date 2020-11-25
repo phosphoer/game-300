@@ -1,0 +1,10 @@
+<RotationAnchorFrontAnimationSet>
+
+	<Texture>RotationAnchorFront_spritesheet.png</Texture>
+	<Tracks>
+		<Default>7</Default>
+	</Tracks>
+	<StartTrack>0</StartTrack>
+	<StartFrame>6</StartFrame>
+
+</RotationAnchorFrontAnimationSet>

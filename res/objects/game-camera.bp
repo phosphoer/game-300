@@ -1,0 +1,27 @@
+<Blueprint>
+  <Name>Game Camera</Name>
+
+  <Position><X>2.0</X><Y>2.0</Y><Z>10.0</Z></Position>
+
+  <Components>
+
+    <Camera>
+      <Target><X>2.0</X><Y>2.0</Y><Z>0.0</Z></Target>
+      <Up><X>0.0</X><Y>1.0</Y><Z>0.0</Z></Up>
+
+      <Width>36.0</Width>
+      <Height>27.0</Height>
+      <Near>1.0</Near>
+      <Far>200.0</Far>
+      <Focal>24.0</Focal>
+
+      <Projection>Orthographic</Projection>
+    </Camera>
+
+    <LogicComponent>
+      <ActionList>game-camera.lst</ActionList>
+    </LogicComponent>
+    
+  </Components>
+
+</Blueprint>

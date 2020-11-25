@@ -1,0 +1,18 @@
+<Blueprint>
+  <Name>FrontRotationTile</Name>
+
+  <Components>
+
+    <TileGameplayComponent>
+      <DefaultAxis>2</DefaultAxis>
+      <AnchorAxis>-1</AnchorAxis>
+      <TileType>4</TileType>
+    </TileGameplayComponent>
+
+    <SpriteComponent>
+      <Animation>RotationAnchorFrontAnimationSet.sad</Animation>
+    </SpriteComponent>
+    
+  </Components>
+
+</Blueprint>

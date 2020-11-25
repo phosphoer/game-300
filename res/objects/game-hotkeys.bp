@@ -1,0 +1,11 @@
+<Blueprint>
+  <Name>Game Hotkeys</Name>
+  <IsSpaceable>false</IsSpaceable>
+
+  <Components>
+    <LogicComponent>
+      <ActionList>game-hotkeys.lst</ActionList>
+    </LogicComponent>
+  </Components>
+
+</Blueprint>

@@ -1,0 +1,7 @@
+subduction (Puzzle, Platformer)
+
+Subduction is a puzzle platformer where you play as a character from a three dimensional world that can only interact with two dimensions at a time. You can rotate to three different perspectives to get through 3D levels while moving in 2D only. Eventually you recieve the ability to bind layers together such that you can move in depth to reach areas you could otherwise not.
+
+Nicholas Baldwin - Producer, Graphics, SFX
+Aaron Biddlecom - Design Lead, Game Logic, Music, Art
+Jake Leonard - Tools, Sound Programming, UI, Repairman

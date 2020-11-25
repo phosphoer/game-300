@@ -1,0 +1,24 @@
+<World>
+  <Layer>
+    <Type type="string">Collision</Type>
+    <File type="string">test-col.map</File>
+  </Layer>
+
+  <Object>
+    <Blueprint>player.bp</Blueprint>
+    <Name>Player</Name>
+    <TilePosition><X>0</X><Y>0</Y><Z>2</Z></TilePosition>
+  </Object>
+
+  <Object>
+    <Blueprint>game-camera.bp</Blueprint>
+    <Name>Camera</Name>
+    <TilePosition><X>0</X><Y>0</Y><Z>0</Z></TilePosition>
+  </Object>
+  
+  <Object>
+    <Blueprint>game-hotkeys.bp</Blueprint>
+    <Name>GameHotkeys</Name>
+    <TilePosition><X>0</X><Y>0</Y><Z>0</Z></TilePosition>
+  </Object>
+</World>

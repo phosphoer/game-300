@@ -1,0 +1,11 @@
+float4 u_pixel_constants;
+
+float2 CorrectTextureOffset(float4 i)
+{
+  return i.xy;
+}
+
+float2 GetDeviceCoordinates(float2 i)
+{
+  return i.xy * u_pixel_constants.xy;
+}

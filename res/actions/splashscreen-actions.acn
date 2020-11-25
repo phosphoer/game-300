@@ -1,0 +1,6 @@
+<InputActions>
+  <kKeyEnter>SkipPresentation</kKeyEnter>
+  <kKeySpace>SkipPresentation</kKeySpace>
+  <kKeyBackspace>SkipPresentation</kKeyBackspace>
+  <kMouseLeftButton>SkipPresentation</kMouseLeftButton>
+</InputActions>

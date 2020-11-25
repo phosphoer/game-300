@@ -1,0 +1,14 @@
+<Shader>
+  <Name>front_layer</Name>
+
+  <Type>Pixel</Type>
+
+  <File>front_layer.psh</File>
+
+  <Constants>
+    <Name>u_lightness</Name>
+    <Name>u_alpha</Name>
+    <Name>s_texture</Name>
+    <Name>s_edges</Name>
+  </Constants>
+</Shader>

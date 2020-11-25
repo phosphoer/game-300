@@ -1,0 +1,38 @@
+<ActionList>
+
+  <WaitAction>
+    <LifeTime>1.5</LifeTime>
+    <IsBlocking>true</IsBlocking>
+  </WaitAction>
+
+  <AnimatePropertyAction>
+    <LifeTime>0.0</LifeTime>
+    <IsBlocking>false</IsBlocking>
+    <Field>m_position.m_x</Field>
+    <Time>3.0</Time>
+    <IsRelative>true</IsRelative>
+    <BeginFloat>0.0</BeginFloat>
+    <EndFloat>-800.0</EndFloat>
+  </AnimatePropertyAction>
+
+  <WaitAction>
+    <LifeTime>3.0</LifeTime>
+    <IsBlocking>true</IsBlocking>
+  </WaitAction>
+  
+  <WaitAction>
+    <LifeTime>1.5</LifeTime>
+    <IsBlocking>true</IsBlocking>
+  </WaitAction>
+
+  <AnimatePropertyAction>
+    <LifeTime>0.0</LifeTime>
+    <IsBlocking>false</IsBlocking>
+    <Field>m_position.m_x</Field>
+    <Time>3.0</Time>
+    <IsRelative>true</IsRelative>
+    <BeginFloat>0.0</BeginFloat>
+    <EndFloat>-800.0</EndFloat>
+  </AnimatePropertyAction>
+
+</ActionList>

@@ -1,0 +1,148 @@
+<!-- 
+     Author: Jake Leonard Date: 2012/07/02
+     All content (c) 2012 DigiPen (USA) Corporation, all rights reserved.
+-->
+ <html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-type" content="text/html;charset=UTF-8" />
+    <title>Dev Console</title>
+    <style>
+    body
+    {
+      background-color: transparent;
+    }
+    body>:first-child
+    {
+      height: 42% !important;
+      background-color: gray;
+      color: rbga(0,0,0,0.6);
+      box-shadow: 3px 8px 5px #111;
+      width: 100%;
+    }
+    #history
+    {
+      width: 99%;
+      display: block;
+      margin-left: 6px;
+      overflow-x: hidden;
+      overflow-y: scroll;
+      height: 75%;
+      background-color: rgba(80,80,80,0.6);
+    }
+    #historyitems
+    {
+      list-style: none;
+      color: white;
+    }
+    #input
+    {
+      width: 95%;
+      font-size: 16px;
+      margin-left: 6px;
+      height: 10%;
+      color: black;
+      padding: 0px;
+      background-color: white;
+      opacity: 0.6;
+      border: none;
+      resize: none;
+      z-index: 999;
+      box-shadow: 3px 8px 5px #666;
+    }
+    .returndata
+    {
+      color: rgb(190,190,190);
+    }
+    </style>
+    <script>
+      var curHistoryIndex = 0;
+      function getHistory()
+      {
+        return document.getElementById("historyitems").getElementsByTagName("span");
+      }
+      function sendDataToPython()
+      {
+        var userInput = document.getElementById("input");
+        var data = userInput.value;
+        if(data.length <= 5)
+          return;
+        
+        userInput.value = "";
+        createInputHistory(data);
+        window.DispatchImprobabilityEvent("OnPyConsoleSend", data);
+      }
+      function createInputHistory(data)
+      {
+        var newHistItem = document.createElement("li");
+        var userInput = document.createElement("span");
+        
+        userInput.setAttribute("class", "userinput");
+        userInput.innerHTML = data;
+        newHistItem.appendChild(userInput);
+        
+        document.getElementById("historyitems").appendChild(newHistItem);
+        curHistoryIndex = getHistory().length - 1;
+      }
+      function createHistoryResults(data)
+      {
+        var newHistItem = document.createElement("li");
+        var returnData = document.createElement("div");
+        
+        returnData.setAttribute("class", "returndata");
+        returnData.innerHTML = data;
+        newHistItem.appendChild(returnData);
+        
+        document.getElementById("historyitems").appendChild(newHistItem);
+      }
+      function navigateConsoleHistory(event)
+      {
+        var textbox = document.getElementById("input");
+        if(event.keyCode == 38) //Up
+        {
+           if(curHistoryIndex == 0 || textbox.value == "")
+            curHistoryIndex = (getHistory().length == 0) ? 0 : getHistory().length - 1;
+           else
+            --curHistoryIndex;
+        }
+        else //Down
+        {
+          if(curHistoryIndex >= getHistory().length -1)
+            curHistoryIndex = 0;
+          else
+            ++curHistoryIndex;
+        }
+        
+        var historyItem = getHistory()[curHistoryIndex];
+        if(historyItem)
+          document.getElementById("input").value = historyItem.innerHTML;
+      }
+      function watchforReturn(event)
+      {
+        if(event.keyCode == 13 && event.shiftKey == false) //Enter
+        {
+          event.preventDefault();
+          sendDataToPython();
+        }
+        else if(event.keyCode == 38 || event.keyCode == 40) //Up & Down Arrow
+          navigateConsoleHistory(event);
+      }
+      function devConsStart()
+      {
+        document.getElementById("input").addEventListener("keyup", watchforReturn, false);
+        window.AddImprobabilityListener("OnPyConsoleRecv", createHistoryResults);
+        document.getElementById("input").focus();
+      }
+      document.addEventListener("DOMContentLoaded",devConsStart, false);
+    </script>
+  </head>
+  <body>
+    <div id="prompt">
+      <div id="history">
+        <ul id="historyitems">
+        </ul>
+      </div>
+      <br />
+      <input type="text" id="input" />
+    </div>
+  </body>
+</html>

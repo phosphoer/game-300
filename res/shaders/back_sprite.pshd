@@ -1,0 +1,13 @@
+<Shader>
+  <Name>back_sprite</Name>
+
+  <Type>Pixel</Type>
+
+  <File>back_sprite.psh</File>
+
+  <Constants>
+    <Name>u_lightness</Name>
+    <Name>u_alpha</Name>
+    <Name>s_sampler</Name>
+  </Constants>
+</Shader>

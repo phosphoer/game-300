@@ -1,0 +1,20 @@
+<PlayerAnimationSet>
+
+	<Texture>PlayerSpriteSheetLight.png</Texture>
+	<Tracks>
+		<WalkRight>4</WalkRight>
+		<WalkLeft>4</WalkLeft>
+		<WalkUp>4</WalkUp>
+		<WalkDown>4</WalkDown>
+		<JumpRight>4</JumpRight>
+		<JumpLeft>4</JumpLeft>
+		<JumpUp>4</JumpUp>
+		<JumpDown>4</JumpDown>
+		<DeadRight>4</DeadRight>
+		<DeadLeft>4</DeadLeft>
+		<Blank>4</Blank>
+	</Tracks>
+	<StartTrack>3</StartTrack>
+	<StartFrame>1</StartFrame>
+
+</PlayerAnimationSet>

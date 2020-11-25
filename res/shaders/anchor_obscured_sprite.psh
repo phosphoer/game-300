@@ -1,0 +1,22 @@
+#include "pixel_base.psh"
+static const float k_alpha = .2f;
+float u_alpha;
+sampler s_sampler;
+
+struct PixelIn
+{
+  float4 m_tex_coords    : TEXCOORD0;
+  float4 m_edge_tex_coords : TEXCOORD1;
+};
+
+float4 main(PixelIn i) : COLOR
+{
+  // get the colors from each texture
+  float4 color = tex2D(s_sampler, CorrectTextureOffset(i.m_tex_coords));
+
+  // get the desaturated value and apply alpha
+  color = float4(color.rgb, color.w * u_alpha * k_alpha);
+
+  // change lightness (only works if fully desaturated)
+  return color;
+}

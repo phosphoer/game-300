@@ -1,0 +1,9 @@
+<Shader>
+  <Name>basic</Name>
+
+  <Type>Vertex</Type>
+
+  <File>basic.vsh</File>
+
+  <Constants></Constants>
+</Shader>

@@ -1,0 +1,8 @@
+<ActionList>
+
+  <AxisCamera>
+    <LifeTime>0.0</LifeTime>
+    <IsBlocking>false</IsBlocking>
+  </AxisCamera>
+
+</ActionList>

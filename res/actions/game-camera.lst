@@ -1,0 +1,10 @@
+<ActionList>
+
+  <AxisCameraFollow>
+    <LifeTime>0.0</LifeTime>
+    <IsBlocking>false</IsBlocking>
+    <ObjectName>Player</ObjectName>
+    <Distance>7.5</Distance>
+  </AxisCameraFollow>
+
+</ActionList>

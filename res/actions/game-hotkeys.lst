@@ -1,0 +1,11 @@
+<ActionList>
+
+  <PushSpaceAction>
+    <LifeTime>0.0</LifeTime>
+    <IsBlocking>false</IsBlocking>
+    <OnActionPressed>Pause</OnActionPressed>
+    <Name>pause-menu-space.spc</Name>
+    <IsDeep>false</IsDeep>
+  </PushSpaceAction>  
+
+</ActionList>

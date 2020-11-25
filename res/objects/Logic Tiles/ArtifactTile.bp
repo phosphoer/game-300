@@ -1,0 +1,18 @@
+<Blueprint>
+  <Name>ArtifactTile</Name>
+
+  <Components>
+
+    <TileGameplayComponent>
+      <Default>-1</Default>
+      <AnchorAxis>-1</AnchorAxis>
+      <TileType>8</TileType>
+    </TileGameplayComponent>
+
+    <SpriteComponent>
+      <Animation>ArtifactAnimationSet.sad</Animation>
+    </SpriteComponent>
+    
+  </Components>
+
+</Blueprint>

@@ -1,0 +1,9 @@
+<Shader>
+  <Name>anchor_veil</Name>
+
+  <Type>Pixel</Type>
+
+  <File>anchor_veil.psh</File>
+
+  <Constants></Constants>
+</Shader>
